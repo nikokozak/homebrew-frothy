@@ -1,5 +1,5 @@
 class Frothy < Formula
-  desc "A live lexical language for programmable devices"
+  desc "Live lexical language for programmable devices"
   homepage "https://github.com/nikokozak/frothy"
   version "0.1.0"
   license "MIT"
