@@ -3,12 +3,9 @@ class Frothy < Formula
   homepage "https://github.com/nikokozak/frothy"
   url "https://github.com/nikokozak/frothy/archive/refs/tags/v0.1.1.tar.gz"
   sha256 "e1ecd6143cb3eaf73e2a653942fe4754e2b503b43e09f77822a7e87456f2a907"
-  version "0.1.1"
   license "MIT"
 
-  head do
-    url "https://github.com/nikokozak/frothy.git", branch: "main"
-  end
+  head "https://github.com/nikokozak/frothy.git", branch: "main"
 
   depends_on "go" => :build
 
