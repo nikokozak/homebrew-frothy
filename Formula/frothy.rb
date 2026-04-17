@@ -1,35 +1,23 @@
 class Frothy < Formula
   desc "Live lexical language for programmable devices"
   homepage "https://github.com/nikokozak/frothy"
+  url "https://github.com/nikokozak/frothy/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "e1ecd6143cb3eaf73e2a653942fe4754e2b503b43e09f77822a7e87456f2a907"
   version "0.1.1"
   license "MIT"
 
-  if OS.mac? && RbConfig::CONFIG["host_cpu"] == "arm64"
-    url "https://github.com/nikokozak/frothy/releases/download/v#{version}/frothy-v0.1.1-darwin-arm64.tar.gz"
-    sha256 "f38e8360d4e4c74b8611f17ca24ad3b1b14365649a25c1b9cdec9fc96d1778ee"
-  elsif OS.mac?
-    url "https://github.com/nikokozak/frothy/releases/download/v#{version}/frothy-v0.1.1-darwin-amd64.tar.gz"
-    sha256 "e221fcdde5d551ee97d9c4332361f70edca90bcd1885763cbb2cf8da3cc02980"
-  elsif OS.linux? && ["amd64", "x86_64"].include?(RbConfig::CONFIG["host_cpu"])
-    url "https://github.com/nikokozak/frothy/releases/download/v#{version}/frothy-v0.1.1-linux-amd64.tar.gz"
-    sha256 "2dcc23a035565a2ee5dba05d7a7fbf4fdbcec1959cd6e58ada56fca83d1d92"
-  end
-
   head do
     url "https://github.com/nikokozak/frothy.git", branch: "main"
-    depends_on "go" => :build
   end
 
+  depends_on "go" => :build
+
   def install
-    if build.head?
-      cd "tools/cli" do
-        system "go", "run", "./internal/sdk/cmd/generate",
-               "-repo", buildpath.to_s,
-               "-out", "internal/sdk/generated"
-        system "go", "build", "-o", bin/"frothy", "."
-      end
-    else
-      bin.install "frothy"
+    cd "tools/cli" do
+      system "go", "run", "./internal/sdk/cmd/generate",
+             "-repo", buildpath.to_s,
+             "-out", "internal/sdk/generated"
+      system "go", "build", "-o", bin/"frothy", "."
     end
   end
 
