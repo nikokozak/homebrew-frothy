@@ -1,7 +1,6 @@
 # typed: strict
 # frozen_string_literal: true
 
-# Substitute only from real, reachable Frothy release archives.
 class Frothy < Formula
   desc "Live language kernel CLI for programmable devices"
   homepage "https://frothy.dev"
