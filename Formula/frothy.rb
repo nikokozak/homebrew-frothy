@@ -5,7 +5,6 @@ class Frothy < Formula
   desc "Live language kernel CLI for programmable devices"
   homepage "https://frothy.dev"
   url "https://github.com/nikokozak/FrothyRewrite/archive/refs/tags/v0.1.3.tar.gz"
-  version "0.1.3"
   sha256 "9a86723aa06450f9528df7f9e59874d56f190672e235c51dc86dad7582e39c75"
   license "MIT"
 
