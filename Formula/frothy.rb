@@ -4,16 +4,16 @@
 class Frothy < Formula
   desc "Live language kernel CLI for programmable devices"
   homepage "https://frothy.dev"
-  url "https://github.com/nikokozak/FrothyRewrite/archive/refs/tags/v0.1.8.tar.gz"
-  sha256 "40337a8df2515068529f2c27b2e66ab621a64bf8a1535fd6355d73177c998622"
+  url "https://github.com/nikokozak/FrothyRewrite/archive/refs/tags/v0.1.9.tar.gz"
+  sha256 "423a6fff4f12443f68efd540e5cea67fe57c2148d341675d4d51f66eb1206a81"
   license "MIT"
 
   depends_on "go" => :build
   depends_on "esptool"
 
   resource "firmware" do
-    url "https://github.com/nikokozak/FrothyRewrite/releases/download/v0.1.8/frothy-firmware-v0.1.8.tar.gz"
-    sha256 "47851a91a681cfe9f71884e7860cdfa366de2f3e8cf3c855f0844ec4678deaa0"
+    url "https://github.com/nikokozak/FrothyRewrite/releases/download/v0.1.9/frothy-firmware-v0.1.9.tar.gz"
+    sha256 "bca0e90c328d183e9721bdfb59998589e890fab969c9270696db22f482ce36cf"
   end
 
   def install
