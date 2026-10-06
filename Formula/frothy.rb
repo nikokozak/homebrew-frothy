@@ -5,8 +5,8 @@
 class Frothy < Formula
   desc "Live language kernel CLI for programmable devices"
   homepage "https://frothy.dev"
-  url "https://github.com/nikokozak/frothy/archive/refs/tags/v0.1.16.tar.gz"
-  sha256 "61fc7c584a04b4634e13eda183fc9d8a0461100ebaded27ec9c4eda8685c9faa"
+  url "https://github.com/nikokozak/frothy/archive/refs/tags/v0.1.22.tar.gz"
+  sha256 "fabcbe6191b8cc488516bb31002162934f2e99e40aa89bd064308a69371d9180"
   license "MIT"
 
   depends_on "go" => :build
@@ -14,8 +14,8 @@ class Frothy < Formula
   depends_on "picotool"
 
   resource "firmware" do
-    url "https://github.com/nikokozak/frothy/releases/download/v0.1.16/frothy-firmware-v0.1.16.tar.gz"
-    sha256 "865a667a41d31019f6c0241ad15085c98a442f63079642482644a0f41b570f22"
+    url "https://github.com/nikokozak/frothy/releases/download/v0.1.22/frothy-firmware-v0.1.22.tar.gz"
+    sha256 "a0f42e695cf6a3d1ac977fb63f63acfac4b78a4abf13c9bba2dedbf48b66b567"
   end
 
   def install
